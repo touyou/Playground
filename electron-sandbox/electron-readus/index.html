@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="readUs">
+  <head>
+    <meta charset="utf-8">
+    <title>Electron Read Us</title>
+  </head>
+  <body ng-controller="MainController as main">
+
+    <ul>
+      <li ng-repeat="file in main.fileList">
+        <a ng-click="main.getFile(file)">{{file.moduleName}}</a>
+      </li>
+    </ul>
+
+    <div ng-if="main.fileText">
+      <div md-preview="main.fileText"></div>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/marked/lib/marked.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
