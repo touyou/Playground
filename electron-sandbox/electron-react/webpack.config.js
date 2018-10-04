@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   target: 'node',
-  entry: '.ts/index.tsx',
+  entry: './ts/index.tsx',
   // 差分ビルドが出来るようになる
   cache: true,
   mode: 'development',
@@ -13,7 +13,23 @@ module.exports = {
   },
   module: {
     rules: [{
-
-    }]
-  }
-}
+      test: /\.tsx?$/,
+      use: 'ts-loader'
+    }, {
+      test: /\.tsx?$/,
+      enforce: 'pre',
+      loader: 'tslint-loader',
+      options: {
+        configFile: './tslint.json',
+        typeCheck: true,
+      },
+    }],
+  },
+  resolve: {
+    extensions: [
+      '.ts',
+      '.tsx',
+      '.js',
+    ]
+  },
+};
