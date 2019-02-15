@@ -1,0 +1,11 @@
+/Users/touyou/Projects/Playground/dotnetSample/bin/Debug/netcoreapp2.2/dotnetSample.deps.json
+/Users/touyou/Projects/Playground/dotnetSample/bin/Debug/netcoreapp2.2/dotnetSample.runtimeconfig.json
+/Users/touyou/Projects/Playground/dotnetSample/bin/Debug/netcoreapp2.2/dotnetSample.runtimeconfig.dev.json
+/Users/touyou/Projects/Playground/dotnetSample/bin/Debug/netcoreapp2.2/dotnetSample.dll
+/Users/touyou/Projects/Playground/dotnetSample/bin/Debug/netcoreapp2.2/dotnetSample.pdb
+/Users/touyou/Projects/Playground/dotnetSample/obj/Debug/netcoreapp2.2/dotnetSample.csprojAssemblyReference.cache
+/Users/touyou/Projects/Playground/dotnetSample/obj/Debug/netcoreapp2.2/dotnetSample.csproj.CoreCompileInputs.cache
+/Users/touyou/Projects/Playground/dotnetSample/obj/Debug/netcoreapp2.2/dotnetSample.AssemblyInfoInputs.cache
+/Users/touyou/Projects/Playground/dotnetSample/obj/Debug/netcoreapp2.2/dotnetSample.AssemblyInfo.cs
+/Users/touyou/Projects/Playground/dotnetSample/obj/Debug/netcoreapp2.2/dotnetSample.dll
+/Users/touyou/Projects/Playground/dotnetSample/obj/Debug/netcoreapp2.2/dotnetSample.pdb
