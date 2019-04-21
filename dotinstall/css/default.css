@@ -1,0 +1,87 @@
+/*
+セレクタ { プロパティ名:値; }
+セレクタ {
+    プロパティ名: 値;
+    プロパティ名: 値;
+}
+
+* ユニバーサルセレクタ
+要素名 p h1 div
+#id
+.class
+
+a, b ... aとbに
+a b ... aの階層下にあるbすべて
+a > b ... aの直下のb
+a + b ... aの次にあるb
+ab ... aかつbに
+
+属性セレクタ
+tag[属性] tagのうち属性があるもの
+tag[属性="値"] tagのうち属性があってその値が値のもの
+tag[属性~="値"] 属性に値が含まれているもの
+
+擬似クラス
+ul li:first-child　最初のli
+
+a:link　未訪問
+a:visited　訪問済み
+a:hover　マウスをのせた
+a:active　マウスをクリックしたとき
+↑この順序で
+input:focus　フォーカスがあるとき
+
+擬似要素
+p:first-line　一行目
+p:first-letter　一文字目
+p:before {
+    content: "-->"
+}
+p:after {
+    content: "<--"
+}
+
+詳細度
+    (a) style=""
+    (b) id
+    (c) 属性/擬似クラス
+    (d) 要素/擬似要素
+aのほうから大きいものが優先される
+同じ詳細度だと後ろに書かれたものが優先される
+!importantで最優先に
+
+値
+- 長さ
+    - px
+    - em　親要素の何倍か
+    - %　親要素の何％か
+- 色
+    - 名前
+    - RGB 0-f / 00-ff / 0-255 / 0-100%
+        - Red
+        - Green
+        - Blue
+
+ボックスモデル
+width, height, border, padding(内側の余白), margin(外側の余白)
+heightに関しては親要素のheightを明示的に示さなければならない。
+border-color, border-width
+border-style : solid / dotted / dashed / double /inset / outset
+borderのみでも
+border-top, border-bottom, border-left, border-right
+padding:
+  all
+  top/bottom right/left
+  top right/left bottom
+  top right bottom left
+marginも同様
+marginの相殺
+隣り合ったboxのmarginは大きいほうに結合される
+
+*/
+/** {
+    color: skyblue;
+}*/
+h1, p { color: skyblue; }
+#first { color: orange; }
+.points { color: violet; }
