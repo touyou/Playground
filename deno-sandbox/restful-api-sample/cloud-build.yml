@@ -1,0 +1,12 @@
+steps:
+  name: gcr.io/cloud-builders/docker
+  args:
+    [
+      "build",
+      "-f",
+      "Dockerfile",
+      "-t",
+      "gcr.io/deno-playground/deno-example",
+      ".",
+    ]
+images: ["gcr.io/deno-playground/deno-example"]
