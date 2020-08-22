@@ -43,6 +43,20 @@ impl Cpu {
         self.regs[0] = 0;
 
         match opcode {
+            0x63 => {
+                let imm = (((inst & 0x80000000) as i32 as i64 >> 19) as u64)
+                    | ((inst & 0x80)  << 4)
+                    | ((inst >> 20) & 0x7e0)
+                    | ((inst >> 7) & 0x1e);
+                match funct3 {
+                    0x0 => {
+                        // beq
+                        if self.regs[rs1] == self.regs[rs2] {
+                            self.pc = self.pc.wrapping_add(imm).wrapping_sub(4);
+                        }
+                    }
+                }
+            }
             0x13 => {
                 // addi
                 let imm = ((inst & 0xfff00000) as i32 as i64 >> 20) as u64;
